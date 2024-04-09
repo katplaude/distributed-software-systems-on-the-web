@@ -3,7 +3,7 @@ function createMessage(person) {
     var age = person.age;
     var city = "world";
 
-    if (typeof person.city === "undefined") {
+    if (typeof person.city !== "undefined") {
         city = person.city;
     }
 
