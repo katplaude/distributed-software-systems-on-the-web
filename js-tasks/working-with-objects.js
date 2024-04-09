@@ -18,5 +18,11 @@ const titles = years.map(element => element.title);
 console.log(titles.join());
 
 // List all property names of the first book separated by a comma (expected output: 'title, author, year')...
+const book = library[0];
+const names = Object.values(book);
+console.log(names.join());
 
 // List all bestseller book titles...
+const bestsellers = library.filter((element) => element.bestseller === true);
+const bestTitles = bestsellers.map(element=> element.title);
+console.log(bestTitles.join());
