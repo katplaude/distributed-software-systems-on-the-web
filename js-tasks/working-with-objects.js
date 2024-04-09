@@ -8,8 +8,14 @@ const library = [
 // Log the result after each task:
 
 // List each author (without duplicates)...
+const authors = library.map(element => element.author);
+const noDuplicates = [...new Set(authors)];
+console.log(noDuplicates.join());
 
 // List all book titles published after 2000...
+const years = library.filter(element=> element.year > 2000);
+const titles = years.map(element => element.title);
+console.log(titles.join());
 
 // List all property names of the first book separated by a comma (expected output: 'title, author, year')...
 
