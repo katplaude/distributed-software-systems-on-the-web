@@ -1,21 +1,19 @@
-function concatenateStrings(strings, delimiter) {
-    if (typeof delimiter === 'undefined') {
-        delimiter = ', ';
-    }
 
-    var result = '';
 
-    for (var i = 0; i < strings.length; i++) {
-        result += strings[i];
-        if (i < strings.length - 1) {
+const concatenateStrings = (strings, delimiter = ', ') => {
+    let result = '';
+
+    strings.forEach((str, index) => {
+        result += str;
+        if (index < strings.length - 1) {
             result += delimiter;
         }
-    }
+    });
 
     return result;
-}
+};
 
-var words = ['Hello', 'world', 'of', 'JavaScript'];
-var sentence = concatenateStrings(words);
+const words = ['Hello', 'world', 'of', 'JavaScript'];
+const sentence = concatenateStrings(words);
 
 console.log(sentence);

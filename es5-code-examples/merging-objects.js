@@ -1,18 +1,17 @@
-var person = {
+
+const person = {
     name: 'John',
     age: 30
 };
 
-var jobDetails = {
+const jobDetails = {
     title: 'Developer',
     department: 'Engineering'
 };
 
-var employee = {
-    name: person.name,
-    age: person.age,
-    title: jobDetails.title,
-    department: jobDetails.department
+const employee = {
+    ...person,
+    ...jobDetails
 };
 
 console.log(employee);
